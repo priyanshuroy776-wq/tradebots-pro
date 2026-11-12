@@ -1,0 +1,290 @@
+:root {
+  --bg: #080d18;
+  --panel: #111a2b;
+  --panel2: #172238;
+  --text: #f1f5ff;
+  --muted: #91a0b8;
+  --green: #27d69b;
+  --red: #ff6577;
+  --blue: #6b8cff;
+  --border: #26334a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.topbar {
+  height: 70px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d1423;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  color: var(--blue);
+}
+
+.status {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 32px auto;
+}
+
+.welcome,
+.section-heading,
+.price-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+h2 {
+  margin: 7px 0;
+  font-size: 21px;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.muted,
+.small {
+  color: var(--muted);
+}
+
+.muted {
+  font-size: 13px;
+}
+
+.small {
+  font-size: 11px;
+}
+
+.mode-label {
+  border: 1px solid var(--blue);
+  color: #a9baff;
+  border-radius: 20px;
+  padding: 9px 13px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 17px;
+}
+
+.stats .panel h2 {
+  font-size: 24px;
+}
+
+.market-list {
+  margin-top: 15px;
+}
+
+.market-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.market-item:last-child {
+  border-bottom: 0;
+}
+
+.market-item.active {
+  background: var(--panel2);
+  border-radius: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.coin-name {
+  font-weight: bold;
+}
+
+.coin-symbol {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.positive {
+  color: var(--green);
+}
+
+.negative {
+  color: var(--red);
+}
+
+.chart-wrap {
+  width: 100%;
+  height: 230px;
+  margin: 18px 0;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.indicators {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: var(--panel2);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.indicators div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.indicators strong {
+  font-size: 15px;
+}
+
+.note {
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin: 18px 0 8px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: white;
+  font-size: 16px;
+}
+
+.trade-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+button {
+  padding: 13px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buy {
+  background: #087e60;
+}
+
+.sell {
+  background: #b43c51;
+}
+
+.secondary {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  font-size: 11px;
+}
+
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  padding: 20px 0 35px;
+}
+
+@media (max-width: 650px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .chart-wrap {
+    height: 190px;
+  }
+}
