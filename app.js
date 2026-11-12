@@ -252,6 +252,13 @@ document.getElementById("resetBtn").addEventListener("click", () => {
     "Demo account reset.";
 
   render();
+  if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .then(() => console.log("TradeBots Pro app ready"))
+      .catch(error => console.error("App setup error:", error));
+  });
+  }
 });
 
 window.addEventListener("resize", renderAnalysis);
