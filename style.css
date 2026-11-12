@@ -284,7 +284,85 @@ footer {
     padding: 15px;
   }
 
+  
+/* Professional chart terminal */
+
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  margin: 18px 0;
+  overflow: hidden;
+}
+
+#priceChart {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.timeframes,
+.chart-indicators {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.time-btn {
+  background: var(--panel2);
+  color: var(--muted);
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.time-btn.active {
+  background: #25365b;
+  color: white;
+  border-color: var(--blue);
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.toggle-label input {
+  width: auto;
+  accent-color: var(--blue);
+}
+
+.chart-message {
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+  pointer-events: none;
+}
+
+footer a {
+  color: #a9baff;
+}
+
+@media (max-width: 650px) {
   .chart-wrap {
-    height: 190px;
+    height: 290px;
+  }
+
+  .chart-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
