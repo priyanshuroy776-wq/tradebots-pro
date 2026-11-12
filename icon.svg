@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#080d18"/>
+  <path d="M100 350 L190 260 L255 305 L390 145"
+        fill="none" stroke="#6b8cff"
+        stroke-width="30" stroke-linecap="round"
+        stroke-linejoin="round"/>
+  <path d="M310 145 H390 V225"
+        fill="none" stroke="#27d69b"
+        stroke-width="30" stroke-linecap="round"
+        stroke-linejoin="round"/>
+  <text x="256" y="435" font-size="65"
+        font-family="Arial" font-weight="bold"
+        text-anchor="middle" fill="white">TB</text>
+</svg>
